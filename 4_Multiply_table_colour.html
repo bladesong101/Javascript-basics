@@ -1,0 +1,26 @@
+<html>
+
+<head>
+   <script>
+
+   </script>
+</head>
+
+<body>
+   <h1>A multiplication table for your number</h1><br><br>
+   <script>
+      n = parseInt(prompt("enter a number: ", 1))
+      document.write("<table border=1 cellspacing=0 cellpadding=2>")
+      for (i = 1; i <= 100; i++)
+      {
+      if (i%2==0)
+      document.write("<tr bgcolor=blue><td>"+i+"x"+n+" ="+"</td><td align=center><b>"+i*n+"</b></td></tr>")
+      else
+      document.write("<tr bgcolor=grey><td>"+i+"x"+n+" ="+"</td><td align=center><b>"+i*n+"</b></td></tr>")
+      }
+
+      document.write("</table>") 
+   </script>
+</body>
+
+</html>
