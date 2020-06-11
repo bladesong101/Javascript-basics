@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <script>
+function multiTable() 
+      {
+         var n = document.getElementById("number").value;
+         var result = "";
+         for (i = 1; i <= 10; i++)
+         {
+            result = result + n + "x" + i + "=" + n * i + "\n";
+         }
+
+         alert("your number table"+"\n"+result)
+      }
+
+
+        function addnum() {
+            //         if (validatenum() == true);
+            alert("hi1";)
+            var x = parseInt(document.getElementById = ("txtFN").value);
+            alert("hi4";)
+            var y = parseInt(document.getElementById = ("txtSN").value);
+            alert("hi3";)
+            document.getElementById("result").value = x + y
+            alert("hi4";)
+            else alert("hi")
+        }
+
+        function test()
+        alert("he")
+
+
+        function validataData() {
+            a = document.getElementById("txtFN").value;
+            b = document.getElementById("txtSN").value;
+            if (a == '' || a == '') {
+                Alert("values are required")
+                return false;
+            }
+            else {
+                return true
+
+            }
+
+        }
+        function pownum() {
+            x = parseInt(document.getElementById("txtFN").value);
+            x = parseInt(document.getElementById("txtSN").value);
+            result - 1
+            for (i = 1; i <= y; i++)
+                result = result * x;
+
+            document.getElementById("result").value = result
+
+        }
+        function cleardata() {
+            document.getElementById("txtFN").value = "0";
+            document.getElementById("txtSN").value = "0";
+
+        }
+    </script>
+</head>
+
+
+
+<body>
+
+
+    <Table cellspacing="0" border="1">
+        <tr>
+            <td colspan="5">Bens Calculator</td>
+        </tr>
+        <tr>
+            <td colspan="2">Enter first Number</td>
+            <td colspan="3"><input type="text" id="txtFN"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Enter second number</td>
+            <td colspan="3"><input type="text" id="txtSN"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="addnum" id="plus" value="+"></td>
+            <td><input type="button" id="minus" value="-"></td>
+            <td><input type="button" id="devide" value="/"></td>
+            <td><input type="button" id="multiply" value="x"></td>
+            <td><input type="button" id="power" value="^" onclick="test()"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Result is:</td>
+            <td colspan="2"><input type="text" id="result"></td>
+            <td><input type="button" onclick="cleardata()" id="clear" value="clear"></td>
+        </tr>
+
+        <input type="button" id="go" onclick="multiTable()" value="Show Multiplication Table">
+
+    </Table>
+
+
+</body>
+
+</html>
