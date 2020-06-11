@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <script>
+        function cleardata() {
+            document.getElementById("txtFN").value = "";
+            document.getElementById("txtSN").value = "";
+        }
+        function validataData() {
+            var a = document.getElementById("txtFN").value;
+            var b = document.getElementById("txtSN").value;
+            if (a == '' || b == '' || isNaN(a) || isNaN(b)) {
+                alert("valid numbers are required for number 1 and 2");
+                return false;
+            }
+            else
+                return true
+        }
+        function addnum() {
+            if (validataData()) {
+                var x = parseFloat(document.getElementById("txtFN").value);
+                var y = parseFloat(document.getElementById("txtSN").value);
+                document.getElementById("result").value = x + y;
+            }
+        }
+        function subnum() {
+            if (validataData()) {
+                var x = parseFloat(document.getElementById("txtFN").value);
+                var y = parseFloat(document.getElementById("txtSN").value);
+                document.getElementById("result").value = x - y;
+            }
+        }
+        function divnum() {
+            if (validataData()) {
+                var x = parseFloat(document.getElementById("txtFN").value);
+                var y = parseFloat(document.getElementById("txtSN").value);
+                document.getElementById("result").value = x / y;
+            }
+        }
+        function mulnum() {
+            if (validataData()) {
+                var x = parseFloat(document.getElementById("txtFN").value);
+                var y = parseFloat(document.getElementById("txtSN").value);
+                document.getElementById("result").value = x * y;
+            }
+        }
+        function pownum() {
+            x = parseFloat(document.getElementById("txtFN").value);
+            y = parseFloat(document.getElementById("txtSN").value);
+            result = "1"
+            for (i = 1; i <= y; i++) {
+                result = result * x;
+            }
+            document.getElementById("result").value = result
+
+        }
+
+
+ //       function pownum() {
+ //           if (validataData()) {
+ //               var x = parseFloat(document.getElementById("txtFN").value);
+ //               var y = parseFloat(document.getElementById("txtSN").value);
+ //               document.getElementById("result").value = x + y;
+ //           }
+ //       }
+
+    </script>
+</head>
+
+<body>
+    <Table cellspacing="0" border="1">
+        <tr>
+            <td colspan="5">Bens Calculator</td>
+        </tr>
+        <tr>
+            <td colspan="2">Enter first Number</td>
+            <td colspan="3"><input type="text" id="txtFN" value="3"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Enter second number</td>
+            <td colspan="3"><input type="text" id="txtSN" value="2"></td>
+        </tr>
+        <tr>
+            <td><input type="button" onclick="addnum()" id="add" value="+"></td>
+            <td><input type="button" onclick="subnum()" id="minus" value="-"></td>
+            <td><input type="button" onclick="divnum()" id="devide" value="/"></td>
+            <td><input type="button" onclick="mulnum()" id="multiply" value="x"></td>
+            <td><input type="button" onclick="pownum()" id="power" value="^"></td>
+        </tr>
+        <tr>
+            <td colspan="2">Result is:</td>
+            <td colspan="2"><input type="text" id="result"></td>
+            <td><input type="button" onclick="cleardata()" id="clear" value="clear"></td>
+
+        </tr>
+    </table>
+
+</body>
+
+</html>
