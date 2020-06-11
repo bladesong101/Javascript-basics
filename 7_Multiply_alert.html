@@ -1,15 +1,30 @@
 <html>
-<head>
-<script>
 
-</script>
-</head>
-<body>
-<h1>A multiplication table for your number</h1><br><br>
-<script>
-       n=parseInt(prompt("enter a number: ",1))
-       for (i=1;i<=100;i++)
-        document.write(i+"x"+n+"="+(i*n)+"<br>")
+<head>
+   <script>
+
+      function multiTable() 
+      {
+         var n = document.getElementById("number").value;
+         var result = "";
+         for (i = 1; i <= 10; i++)
+         {
+            result = result + n + "x" + i + "=" + n * i + "\n";
+         }
+
+         alert("your number table"+"\n"+result)
+      }
+
+
    </script>
+</head>
+
+<body>
+   <h1>A multiplication table for your number</h1><br><br>
+
+   Enter A number: <input type="number" id="number"><br>
+   <input type="button" id="go" onclick="multiTable()" value="Show Multiplication Table">
+
 </body>
+
 </html>
