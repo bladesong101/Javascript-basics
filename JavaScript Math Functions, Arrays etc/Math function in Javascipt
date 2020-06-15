@@ -1,0 +1,5 @@
+math.pow(x,y)
+.abs(x)
+.sqrt(x)
+.floor(x)
+.PI
