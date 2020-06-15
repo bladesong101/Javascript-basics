@@ -1,0 +1,77 @@
+<html>
+<script>
+    function getfact(p) {
+        result = 1;
+        for (i = 1; i <= p; i++) {
+            result = result * i;
+        }
+        return result;
+    }
+    function factorial() {
+        var n = document.getElementById("txtInput").value;
+        document.getElementById("txtResult").value = getfact(n);
+    }
+    function nCr() {
+        var n = parseInt(document.getElementById("n").value);
+        var r = parseInt(document.getElementById("r").value);
+        answer = (getfact(n) / (getfact(n - r) * getfact(r)))
+        document.getElementById("txtResult2").value = answer;
+    }
+
+    function nPr() {
+        var n = parseInt(document.getElementById("n").value);
+        var r = parseInt(document.getElementById("r").value);
+        answer = (getfact(n) / getfact(n - r))
+        document.getElementById("txtResult2").value = answer;
+    }
+</script>
+
+<head>
+
+<body>
+
+    <table cellspacing=0 border=1>
+        <tr>
+            <td colspan="2" align=center>Factorial Calculator</td>
+        <tr>
+        <tr>
+            <td>Enter a number</td>
+            <td><input type="text" id="txtInput"></td>
+        </tr>
+        <tr>
+            <td><input type="button" id="btnGo" value="Factorial" onclick="factorial()"></td>
+            <td><input type="text" id="txtResult"></td>
+
+        </tr>
+
+    </table>
+
+<br><br><br>
+    <table cellspacing=0 border="1">
+        <tr>
+            <td colspan="2">Permutations and Combinations</td>
+        </tr>
+        <tr>
+            <td>n value:</td>
+            <td><input type="text" id=n></td>
+        </tr>
+        <tr>
+            <td>r value:</td>
+            <td><input type="text" id=r></td>
+        </tr>
+        <tr>
+            <td width=200><input type="button" id="btnnCr" onclick="nCr()" value="nCr"></td>
+            <td width=200><input type="button" id="btnnPr" onclick="nPr()" value="nPr"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align=center><input type="text" id="txtResult2"></td>
+
+        </tr>
+
+
+    </table>
+
+</body>
+</head>
+
+</html>
